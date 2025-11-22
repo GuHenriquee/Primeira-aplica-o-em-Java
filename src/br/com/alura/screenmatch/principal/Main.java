@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
@@ -9,10 +11,7 @@ import java.util.ArrayList;
 public class Main{
     public static void main(String[] args) {
 
-        Filme meuFilme = new Filme();
-
-        meuFilme.setNome("Poderoso BILL");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("Poderoso BILL", 1970);
         meuFilme.setDuracaoEmMinutos(180);
 
 
@@ -24,10 +23,8 @@ public class Main{
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println("Media das avaliações: " + meuFilme.obterMedia());
 
-        Serie lost = new Serie();
+        Serie lost = new Serie("Lost", 2000);
 
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -38,10 +35,7 @@ public class Main{
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
 
 
-        Filme outroFilme = new Filme();
-
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
         outroFilme.setDuracaoEmMinutos(100);
 
 
@@ -67,11 +61,10 @@ public class Main{
         filtro.filtra(episodio);
 
 
-        var filmeGu = new Filme();
+        var filmeGu = new Filme("junior", 2010);
 
         filmeGu.setDuracaoEmMinutos(95);
         filmeGu.setNome("Megamente");
-        filmeGu.setAnoDeLancamento(2010);
         filmeGu.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
@@ -85,6 +78,7 @@ public class Main{
         System.out.println(listaDeFilmes);
         System.out.println("toSting do filme: " + listaDeFilmes.get(0).toString());
 
+        Object object = filmeGu;
     }
 
 

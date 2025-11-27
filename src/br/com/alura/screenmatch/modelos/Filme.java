@@ -1,12 +1,11 @@
 package br.com.alura.screenmatch.modelos;
 import br.com.alura.screenmatch.calculos.Classificavel;
-import br.com.alura.screenmatch.modelos.Titulo;
 
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
     public Filme(String nome, int anoDeLancamento) {
-        super(nome,anoDeLancamento);
+        super(nome);
     }
 
 
